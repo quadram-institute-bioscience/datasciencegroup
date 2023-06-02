@@ -19,9 +19,10 @@ Are you familiar with Python but never used Pandas?
 
 No problems:
 
-* [A first introdution to Pandas DataFrames](https://gist.github.com/telatin/a1fcf685f41d406ac5ed52f497aca13a)
-* [A first introduction to Matplotlib](https://gist.github.com/telatin/cfaf8cfd89b310ac742b4e037603b2ab)
+* [A first introdution to Pandas DataFrames](https://gist.github.com/telatin/a1fcf685f41d406ac5ed52f497aca13a): what is a dataframe, simple operations
+* [A first introduction to Matplotlib](https://gist.github.com/telatin/cfaf8cfd89b310ac742b4e037603b2ab): basic plots from a randomly generated dataframe
 
 And a worked example using dataframes and plots:
 
-* [Plotting microbiome compositions](https://gist.github.com/telatin/cfaf8cfd89b310ac742b4e037603b2ab)
+* [Plotting microbiome compositions](https://gist.github.com/telatin/e644cd908d70e3294a149221ef55f491): loading taxonomy, counts, metadata from three files and integrating/plotting
+
