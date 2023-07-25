@@ -11,7 +11,7 @@ Materials and notes used to facilitate the discussions during the meetings.
 
 * [Plotting Phylogenetic trees in R (Nabil-Fareed Alikhan)](1_phylogenetic_trees/data_science_1_makingtrees.ipynb)
 * [Exploring Statistical Procedures (George Savva)](https://github.com/georgemsavva/DataScienceGroup#readme)
-* [Rarefaction of microbiome data (Matteo Calgaro)](https://mcalgaro93.github.io/randomtopics/rarefaction-practice-in-microbiome-data-analysis.html) ([data](https://github.com/mcalgaro93/randomtopics/tree/main/data/01_rarefaction))
+* [Rarefaction of microbiome data (Matteo Calgaro)](https://mcalgaro93.github.io/randomtopics/rarefaction-practice-in-microbiome-data-analysis.html) ([data](2_rarefaction/README.md))
 
 * [Data Science in Python: a primer](python/README.md) 
 
