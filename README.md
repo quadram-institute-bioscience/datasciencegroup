@@ -14,6 +14,7 @@ Materials and notes used to facilitate the discussions during the meetings.
 * [Rarefaction of microbiome data (Matteo Calgaro)](https://mcalgaro93.github.io/randomtopics/rarefaction-practice-in-microbiome-data-analysis.html) ([data](2_rarefaction/README.md))
 * [Machine Learning with Python](https://drive.google.com/drive/folders/1UY6pvTyzaAuNIgJfXMwIWCEBryKdcVdb), Dr Dipali Singh
 
+Introductory material:
 * [Data Science in Python: a primer](python/README.md) 
 
 ## Joining the group
