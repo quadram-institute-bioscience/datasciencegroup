@@ -4,12 +4,21 @@
     <title>Core Bioinformatics Induction</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/5/flatly/bootstrap.min.css">
+    <style>
+        <!--
+        h1,h2,h3,h4 { color: #343f47; }
+        .qigreen { color: #009d80; }
+        .qilime {  color: #bed230; }
+        .qidark {  color: #343f47; }
+        -->
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="mt-5">Core Bioinformatics Induction</h1>
+        <h1 class="mt-5 qigreen">Core Bioinformatics Induction</h1>
 
-	<h2 class="mt-5">Video introductions</h2>
+	<h2 class="mt-5 qilime">Video introductions</h2>
         <div class="list-group mt-4">
             <a href="https://www.youtube.com/watch?v=TPnv5ikhSmk" class="list-group-item list-group-item-action" target="_blank">
 		IRIDA, the short reads archiving platform</a>
@@ -21,8 +30,8 @@
     </div>
 
 
-    <div class="container">
-    <h2>General information</h2>
+    <div  class="container my-5">
+    <h2 class="mt-5 qilime">General information</h2>
     <p>See: <a href="https://quadram-institute.atlassian.net/servicedesk/customer/portal/3/article/4423813">documentation pages (login required)</a></p>
     <h3>Who should you contact?</h3>
     <p>As you may remember from your Computing Orientation Seminar, there are two teams ("Core Computing" and "Research Computing" [RC]) 
@@ -48,30 +57,36 @@
     </ul>
     <p>Furthermore, in case you are more involved in computational work, the bioinformatics team is quite active in the Data Science group at the QIB.</p>
     
-    <h3>Data storage facilities</h3>
+    <h4>Data storage facilities</h4>
     <p>The core bioinformatics team oversees the setting up and maintaining systems for storing and organizing sequencing and related data in a secure and accessible manner.</p>
-
-    <h3>NBI HPC</h3>
-    <p>The HPC facilities provide Institutes with the significant ‘compute’ power required for the processing and analysis of genomic/proteomic data (bioinformatics), as well modelling, simulations and other areas of study.</p>
-    <p>HPC stands for High-Performance Computing. It refers to the use of powerful computing systems, often consisting of multiple interconnected computers or servers, to perform complex and computationally demanding tasks. HPC systems are designed to deliver high computational performance, large storage capacity, and high-speed data transfer capabilities.</p>
-    <p>The HPC at NBI is managed by Research computing. Core Bioinformatics at QIB are users of the system, just like you, we can provide assistance and liaise with Research computing on any issues.</p>
-
-    <h3>QIB-Cloud</h3>
-    <p>In the QIB Cloud, OpenStack handles provisioning, and a web interface based on Bryn interface allows users to control their resources. It is modelled after CLIMB-BIG-DATA.</p>
     
-    <h3>OMERO</h3>
-    <p>OMERO stands for Open Microscopy Environment Remote Objects. It is an open-source software platform designed for managing, sharing, and analyzing biological microscopy data. The primary goal of OMERO is to facilitate the storage, organization, and collaboration of large sets of microscope images and related metadata.</p>
+    <ul>
+    <li><p><strong>NBI HPC</strong>
+    The HPC facilities provide Institutes with the significant ‘compute’ power required for the processing and analysis of genomic/proteomic data (bioinformatics),
+	    as well as modelling, simulations and other areas of study.</p>
+    <p>HPC stands for High-Performance Computing. It refers to using powerful computing systems, 
+	    often consisting of multiple interconnected computers or servers, to perform complex and computationally demanding tasks. 
+	    HPC systems are designed to deliver high computational performance, large storage capacity, and high-speed data transfer capabilities.</p>
+    <p>The HPC at NBI is managed by Research computing. Core Bioinformatics at QIB are users of the system, just like you, 
+	    we can assist and liaise with Research computing on any issues.</p></li>
+
+    <li><p><strong>QIB-Cloud</strong>
+    In the QIB Cloud, OpenStack handles provisioning, and a web interface based on Bryn interface allows users to control their resources. It is modelled after CLIMB-BIG-DATA.</p></li>
     
-    <h3>IRIDA</h3>
-    <p>We use IRIDA as the primary storage for sequencing reads. Notice that you must upload your (non-human) data to IRIDA if the Quadram have any involvement in the project.</p>
+    <li> <p><strong>OMERO</strong>
+   OMERO stands for Open Microscopy Environment Remote Objects. It is an open-source software platform designed for managing, sharing, and analyzing biological microscopy data. The primary goal of OMERO is to facilitate the storage, organization, and collaboration of large sets of microscope images and related metadata.</p></li>
+    
+    <li><p><strong>IRIDA</strong>
+    We use IRIDA as the primary storage for sequencing reads. Notice that you must upload your (non-human) data to IRIDA if the Quadram have any involvement in the project.</p></li>
 
-    <h3>Galaxy</h3>
-    <p>Galaxy is the front-end from where we submit all our jobs to the cluster. It contains most sequence-based bioinformatics software, and you can create or use existing workflows.</p>
-
-    <h3>To get started</h3>
+    <li><p><strong>Galaxy:</strong>
+    Galaxy is the front-end from where we submit all our jobs to the cluster. It contains most sequence-based bioinformatics software, and you can create or use existing workflows.</p>
+    </li>
+     </ul>
+    <h4>To get started</h4>
     <p>Right now, you can use your Quadram e-mail+password to automatically create an account on Galaxy. You can also contact us to create an IRIDA account for you.</p>
 
-    <h3>NBI and Quadram credentials</h3>
+    <h4>NBI and Quadram credentials</h4>
     <p>If you are new to the Quadram, you may have noticed that the Computing Services folks gave you both a short username and a long e-mail. To connect to the HPC or to your local machine, you need to enter the short version, while other services request the e-mail.</p>
 </div>
  
