@@ -22,5 +22,8 @@
 
 ```bash
 # Download Silva 138 with `dadaist2-getdb` first
-dadaist2 -r ~/refs/silva_nr_v138_train_set.fa.gz -i MiSeq_SOP/ -m metadata.csv -o dadaist2-output/ --threads 16
+dadaist2 -r ~/refs/silva_nr_v138_train_set.fa.gz \
+  -i MiSeq_SOP/ -m metadata.csv \
+  -o dadaist2-output/ \
+  --threads 16
 ```
