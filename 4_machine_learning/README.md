@@ -1,4 +1,6 @@
-# Machine Learning with Microbiome Data Workshop
+# Machine Learning  with Microbiome Data Workshop
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/telatin/4d5ec671b2ad74a8b2ba3d78f8269dc1/prediction-notes.ipynb)
 
 > Guest speaker:
 > *Dr Giovanni Birolo*, University of Turin (Italy)
