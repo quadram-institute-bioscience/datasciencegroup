@@ -12,7 +12,8 @@ Materials and notes used to facilitate the discussions during the meetings.
 * [Plotting Phylogenetic trees in R (Nabil-Fareed Alikhan)](1_phylogenetic_trees/data_science_1_makingtrees.ipynb)
 * [Exploring Statistical Procedures (George Savva)](https://github.com/georgemsavva/DataScienceGroup#readme)
 * [Rarefaction of microbiome data (Andrea Telatin and Matteo Calgaro)](https://mcalgaro93.github.io/randomtopics/rarefaction-practice-in-microbiome-data-analysis.html) ([data](2_rarefaction/README.md))
-* [Machine Learning with Python (Dipali Singh)](https://drive.google.com/drive/folders/1UY6pvTyzaAuNIgJfXMwIWCEBryKdcVdb), 
+* [Decision Trees and Random Forrests with Python (Dipali Singh)](https://drive.google.com/drive/folders/1UY6pvTyzaAuNIgJfXMwIWCEBryKdcVdb)
+* [Machine Learning: Cross-validation and Visualizations with Python (Giovanni Birolo)](4_machine_learning/README.md)
 
 Introductory material:
 * [Data Science in Python: a primer](python/README.md) 
