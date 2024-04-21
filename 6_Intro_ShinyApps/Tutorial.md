@@ -417,6 +417,12 @@ Similarly, it is possible to create tables and plot output using renderTable() a
 
 ```R
 server <- function(input, output) {
+
+  # Title main area
+  # ----------------------------------
+  output$toptitle <- renderText({
+    paste("Best ramens in ", input$country)
+  })
   
   # ----------------------------------
   # Table output
@@ -488,6 +494,12 @@ This reactive element can then be used in the renderTable and renderPlot functio
 
 ```R
 server <- function(input, output) {
+
+  # Title main area
+  # ----------------------------------
+  output$toptitle <- renderText({
+    paste("Best ramens in ", input$country)
+  })
   
   # ----------------------------------
   # Reactive elements
