@@ -82,7 +82,7 @@ ui <- fluidPage(
                 h1("Best Ramens in the world", align = "center"),
                 p("Explore the best ramens in the world, recommended by the users themselves! In this tab, you can 
                 select your favorite ramen style and the country of fabrication. The table below display the best three 
-                ramens for this selection!")
+                ramens for this selection!"),
                 HTML('<center><img src="1200px-Shoyu_Ramen.jpg" width="100%"></center>'),
                 br()
                 # ----------------------------------
