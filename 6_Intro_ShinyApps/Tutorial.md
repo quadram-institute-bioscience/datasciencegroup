@@ -422,7 +422,8 @@ server <- function(input, output) {
   # Table output
   output$top3 <- renderTable({
     display_dataset <- ramen_ratings %>% filter(style %in% input$style & country == input$country)
-    display_dataset %>% arrange(desc(stars, review_number)) %>% slice(1:3) %>% select(-continent, -review_number)
+    display_dataset %>% slice_max(tibble(stars,review_number), n=3, with_ties=FALSE) %>% select(-continent) %>%
+      rename("number of reviews"="review_number")
   })
   
   # ----------------------------------
@@ -497,7 +498,8 @@ server <- function(input, output) {
   # ----------------------------------
   # Table output
   output$top3 <- renderTable({
-    display_dataset() %>% arrange(desc(stars, review_number)) %>% slice(1:3) %>% select(-continent, -review_number)
+    display_dataset() %>% slice_max(tibble(stars,review_number), n=3, with_ties=FALSE) %>% select(-continent) %>%
+      rename("number of reviews"="review_number")
   })
   
   # ----------------------------------
@@ -693,7 +695,8 @@ server <- function(input, output) {
   # ----------------------------------
   # Table output
   output$top3 <- renderTable({
-    display_dataset() %>% arrange(desc(stars, review_number)) %>% slice(1:3) %>% select(-continent, -review_number)
+    display_dataset() %>% slice_max(tibble(stars,review_number), n=3, with_ties=FALSE) %>% select(-continent) %>%
+      rename("number of reviews"="review_number")
   })
   
   # ----------------------------------
