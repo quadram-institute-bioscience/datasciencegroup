@@ -15,6 +15,7 @@ Materials and notes used to facilitate the discussions during the meetings.
 * [Decision Trees and Random Forrests with Python (Dipali Singh)](https://drive.google.com/drive/folders/1UY6pvTyzaAuNIgJfXMwIWCEBryKdcVdb)
 * [Machine Learning: Cross-validation and Visualizations with Python (Giovanni Birolo)](4_machine_learning/README.md)
 * [Differential Abundance: BENCHDAMIC](5_benchdamic/README.md)
+* [Introduction to Shiny App development (Alise Ponsero)](6_Intro_ShinyApps/README.md)
 
 Introductory material:
 * [Data Science in Python: a primer](python/README.md) 
