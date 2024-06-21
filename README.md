@@ -16,6 +16,7 @@ Materials and notes used to facilitate the discussions during the meetings.
 * [Machine Learning: Cross-validation and Visualizations with Python (Giovanni Birolo)](4_machine_learning/README.md)
 * [Differential Abundance: BENCHDAMIC](5_benchdamic/README.md)
 * [Introduction to Shiny App development (Alise Ponsero)](6_Intro_ShinyApps/README.md)
+* [MetaPhlAn and HuMANN session](https://github.com/quadram-institute-bioscience/biobackery-2024)
 
 Introductory material:
 * [Data Science in Python: a primer](python/README.md) 
