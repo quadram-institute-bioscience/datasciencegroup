@@ -6,7 +6,6 @@ Scripts and docs from the *Data Science Special Interest Group* at the
 :warning: We are a **working group**. There are "*ice breakers*" but we would like to focus on
 bringing together people who are already beyond the very first steps in R (or Python).
 
-
 Materials and notes used to facilitate the discussions during the meetings.
 
 * [Plotting Phylogenetic trees in R (Nabil-Fareed Alikhan)](1_phylogenetic_trees/data_science_1_makingtrees.ipynb)
@@ -17,6 +16,7 @@ Materials and notes used to facilitate the discussions during the meetings.
 * [Differential Abundance: BENCHDAMIC](5_benchdamic/README.md)
 * [Introduction to Shiny App development (Alise Ponsero)](6_Intro_ShinyApps/README.md)
 * [MetaPhlAn and HuMANN session](https://github.com/quadram-institute-bioscience/biobackery-2024)
+* [Compositional Data analysis for microbiome data (Alise Ponsero)](8_CoDa/README.md)
 
 Introductory material:
 * [Data Science in Python: a primer](python/README.md) 
