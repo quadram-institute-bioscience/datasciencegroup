@@ -7,6 +7,13 @@ ui <- fluidPage(
   
   sidebarLayout(
     sidebarPanel(
+      # Add preset scenarios first
+      selectInput("preset", "Load Preset Scenario:",
+                  choices = c("Custom",
+                              "1. Same Proportions, Different Scales",
+                              "2. Is it an increase ...",
+                              "3. Or is it a decrease in abundance?")),
+      
       # Sample 1 inputs
       h4("Sample 1 Abundances"),
       numericInput("bacteroides1", "Bacteroides:", value = 1000, min = 0),
@@ -18,13 +25,6 @@ ui <- fluidPage(
       numericInput("bacteroides2", "Bacteroides:", value = 2000, min = 0),
       numericInput("prevotella2", "Prevotella:", value = 4000, min = 0),
       numericInput("faecali2", "Faecalibacterium:", value = 2000, min = 0),
-      
-      # Add preset scenarios
-      selectInput("preset", "Load Preset Scenario:",
-                  choices = c("Custom",
-                              "1. Same Proportions, Different Scales",
-                              "2. Impact of One Taxa Increase",
-                              "3. Spurious Correlation")),
       
       # Add explanatory text
       helpText("Modify the absolute abundances and observe how they affect (or don't affect) the relative abundances."),
@@ -41,10 +41,8 @@ ui <- fluidPage(
 )
 
 server <- function(input, output, session) {
-  
-  # Reactive expression for the dataset
-  getData <- reactive({
-    # Update values based on preset scenarios
+  # Observer for preset scenarios
+  observeEvent(input$preset, {
     if (input$preset != "Custom") {
       if (input$preset == "1. Same Proportions, Different Scales") {
         # Sample 1: Base values
@@ -55,7 +53,7 @@ server <- function(input, output, session) {
         updateNumericInput(session, "bacteroides2", value = 5000)
         updateNumericInput(session, "prevotella2", value = 10000)
         updateNumericInput(session, "faecali2", value = 5000)
-      } else if (input$preset == "2. Impact of Taxa Increased") {
+      } else if (input$preset == "2. Is it an increase ...") {
         # Sample 1: Base values
         updateNumericInput(session, "bacteroides1", value = 1000)
         updateNumericInput(session, "prevotella1", value = 2000)
@@ -64,18 +62,21 @@ server <- function(input, output, session) {
         updateNumericInput(session, "bacteroides2", value = 1000)
         updateNumericInput(session, "prevotella2", value = 4000)
         updateNumericInput(session, "faecali2", value = 1000)
-      } else if (input$preset == "3. Impact of Taxa Decrease") {
+      } else if (input$preset == "3. Or is it a decrease in abundance?") {
         # Sample 1: Base values
         updateNumericInput(session, "bacteroides1", value = 1000)
         updateNumericInput(session, "prevotella1", value = 2000)
         updateNumericInput(session, "faecali1", value = 1000)
-        # Sample 2: Two taxa decrease, one stays same
-        updateNumericInput(session, "bacteroides2", value = 200)
-        updateNumericInput(session, "prevotella2", value = 400)
-        updateNumericInput(session, "faecali2", value = 1000)
+        # Sample 2: First and third taxa decrease to achieve same relative abundances as case 2
+        updateNumericInput(session, "bacteroides2", value = 500)
+        updateNumericInput(session, "prevotella2", value = 2000)
+        updateNumericInput(session, "faecali2", value = 500)
       }
     }
-    
+  })
+  
+  # Reactive expression for the dataset
+  getData <- reactive({
     data.frame(
       Sample = rep(c("Sample1", "Sample2"), each = 3),
       Taxa = rep(c("Bacteroides", "Prevotella", "Faecalibacterium"), 2),
