@@ -9,8 +9,8 @@ library(ggrepel)
 
 # Upload and prepare data
 ##########################################
-dataset <- readRDS("physeq_undigested_fava.rds")
-
+dataset <- readRDS("physeq_undigested_fava_corr.rds")
+dataset <- dataset %>% subset_samples(Donor=="C")
 ##########################################
 
 ## Method 1: Bray-Curtis PCoA
@@ -121,16 +121,64 @@ pca_loadings_plot
 pca_scores_plot + pca_loadings_plot
 bc_plot + pca_scores_plot
 
-
-# Print summary statistics
-cat("\nNumber of samples per donor:\n")
-print(table(metadata$Donor))
-
-cat("\nNumber of taxa:", nrow(otu_table), "\n")
-
 cat("\nVariance explained:\n")
 cat("Bray-Curtis PCoA - First two axes:", 
     sprintf("%.1f%%, %.1f%%", bc_var_explained[1], bc_var_explained[2]), "\n")
 cat("Aitchison PCA - First two axes:", 
     sprintf("%.1f%%, %.1f%%", pca_var_explained[1], pca_var_explained[2]), "\n")
 ##########################################
+
+# Add PERMANOVA tests
+############################################
+dataset <- readRDS("physeq_undigested_fava_corr.rds") %>%
+  subset_samples(Donor!="NA") # removing the blanks
+
+# PERMANOVA on Bray-Curtis distances 
+#######
+ps.gen <- microbiome::aggregate_taxa(dataset, level="Genus")
+otu_table <- as.data.frame(t(otu_table(ps.gen)))
+metadata <- as.data.frame(sample_data(ps.gen))
+bc_dist <- vegdist(otu_table, method = "bray")
+
+bc_permanova <- adonis2(bc_dist ~ metadata$Treatment * metadata$Timepoint + metadata$Donor,
+                        permutations = 999,
+                        by = "terms")
+
+print("Bray-Curtis PERMANOVA Results:")
+print(bc_permanova)
+#######
+
+# PERMANOVA on Aitchison distance
+#######
+ps.gen.clr <- microbiome::transform(ps.gen, transform = "clr") 
+otu_table2 <- as.data.frame(t(otu_table(ps.gen.clr)))
+aitchison_dist <- vegdist(otu_table2, method = "euclidean")
+
+aitchison_permanova <- adonis2(aitchison_dist ~ metadata$Treatment * metadata$Timepoint + metadata$Donor,
+                               permutations = 999,
+                               by = "terms")
+
+print("\nAitchison PERMANOVA Results:")
+print(aitchison_permanova)
+#######
+
+# Test for homogeneity of dispersions
+#######
+bc_dispersion <- betadisper(bc_dist, group = metadata$Treatment)
+aitchison_dispersion <- betadisper(aitchison_dist, group = metadata$Treatment)
+
+bc_disp_test <- permutest(bc_dispersion, permutations = 999)
+aitchison_disp_test <- permutest(aitchison_dispersion, permutations = 999)
+
+print("\nBray-Curtis Dispersion Test:")
+print(bc_disp_test)
+print("\nAitchison Dispersion Test:")
+print(aitchison_disp_test)
+
+# Visualize dispersions
+par(mfrow = c(1,2))
+plot(bc_dispersion, main = "Bray-Curtis Distance Dispersion")
+plot(aitchison_dispersion, main = "Aitchison Distance Dispersion")
+
+
+#######
