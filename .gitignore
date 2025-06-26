@@ -49,3 +49,4 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 .ipynb_checkpoints/
+.DS_Store
