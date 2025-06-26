@@ -19,7 +19,7 @@ Materials and notes used to facilitate the discussions during the meetings.
 * [Compositional Data analysis for microbiome data (Alise Ponsero)](8_CoDa/README.md)
 * [AMR profiler benchmark (Sumeet Tiwari)](9_AMR-benchmarking/README.md)
 * [Introduction to epigenetics (Judit Talas)](10_DNA_methylation/README.md)
-* [FAIR data for 'omics datasets (Alise Ponsero]
+* [FAIR data for 'omics datasets (Alise Ponsero)](11_FAIR_for_omics/README.md)
 
 Introductory material:
 * [Data Science in Python: a primer](python/README.md) 
