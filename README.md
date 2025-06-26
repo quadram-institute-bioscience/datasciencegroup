@@ -18,6 +18,8 @@ Materials and notes used to facilitate the discussions during the meetings.
 * [MetaPhlAn and HuMANN session](https://github.com/quadram-institute-bioscience/biobackery-2024)
 * [Compositional Data analysis for microbiome data (Alise Ponsero)](8_CoDa/README.md)
 * [AMR profiler benchmark (Sumeet Tiwari)](9_AMR-benchmarking/README.md)
+* [Introduction to epigenetics (Judit Talas)](10_DNA_methylation/README.md)
+* [FAIR data for 'omics datasets (Alise Ponsero]
 
 Introductory material:
 * [Data Science in Python: a primer](python/README.md) 
