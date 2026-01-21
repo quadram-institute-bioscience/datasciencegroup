@@ -1,5 +1,8 @@
 # Data Science Group
 
+The Data Science Group brings people together across QI and the wider NRP who are interested in data science, bioinformatics, statistics, and related computational disciplines. Our monthly meetings feature informal presentations on research projects, methods, tools, or challenges, followed by open discussion and knowledge exchange. The Data Science Group meets on the last Tuesday of the month, from 2-4pm. Presentations are typically 20-30 minutes, with plenty of time for questions and discussion. Everyone is welcome to attend, whether you're presenting or just interested in the topic.
+
+
 Scripts and docs from the *Data Science Special Interest Group* at the 
 [Quadram Institute Bioscience](https://www.quadram.ac.uk).
 
@@ -27,6 +30,6 @@ Introductory material:
 
 ## Joining the group
 
-If you are a researcher at the QIB and want to join the group, 
+If you are a researcher at the QI/NRP and want to join the group, 
 reach out with **Core Bioinformatics** to be added to the mailing list,
 and check the [intranet events](https://intranet.nbi.ac.uk/infoserv/cgi-bin/calendar/default.asp?ETGID=&Keyword=%22data%20science%22&Month=&DaysAdded=&_=1689756393711).
